@@ -1,7 +1,8 @@
 <template>
   <div id="show-blogs">
     <h1 id="blog-articles-title">All Blog Articles</h1>
-    <div v-for="blog in blogs" class="single-blog">
+    <input type="text"v-model="search" placeholder="search blogs" />
+    <div v-for="blog in filteredBlogs" class="single-blog">
       <h2>{{ blog.title }}</h2>
       <article>{{ blog.body }}</article>
     </div>
@@ -10,20 +11,28 @@
 
 <script>
 
-export default {
+export default{
   data() {
     return {
-      blogs: []
+      blogs: [],
+      search: ''
     }
   },
   methods:{
 
   },
-  created() {
+  created(){
     this.$http.get('https://jsonplaceholder.typicode.com/posts').then(function(data){
       this.blogs = data.body.slice(0, 10);
 
     })
+  },
+  computed:{
+    filteredBlogs() {
+      return this.blogs.filter((blog) => {
+        return blog.title.match(this.search);
+      });
+    }
   }
 
 }
@@ -42,5 +51,8 @@ export default {
 }
 #blog-articles-title {
   text-align: center;
+}
+input {
+  width: 100%;
 }
 </style>
