@@ -6,6 +6,7 @@
       <input type="text" v-model.lazy="blog.title" />
       <label>Blog Content :</label>
       <textarea v-model.lazy="blog.content" cols="30" rows="10"></textarea>
+
       <div id="checkboxes">
         <label>Front-end</label>
         <input type="checkbox" value="Front-end" v-model="blog.categories" />
@@ -17,15 +18,21 @@
         <input type="checkbox" value="Integration" v-model="blog.categories" />
       </div>
 
+      <label>Author</label>
+      <select v-model="blog.author">
+        <option v-for="author in authors">{{ author }}</option>
+      </select>
+
       <div id="preview">
         <h3>Preview Blog</h3>
-        <p>Blog title : {{blog.title}}</p>
+        <p>Blog title : {{ blog.title }}</p>
         <p>Blog content : </p>
-        <p>{{blog.content}}</p>
+        <p>{{ blog.content }}</p>
         <p>Blog Categories : </p>
         <ul v-for="category in blog.categories">
           <li>{{ category }}</li>
         </ul>
+        <p>Author : {{ blog.author }}</p>
       </div>
     </form>
 
@@ -39,8 +46,10 @@ export default {
       blog:  {
         title: "",
         content: "",
-        categories: []
-      }
+        categories: [],
+        author: "",
+      },
+      authors: ['The Net Ninja', 'React Badass', 'Chuck Nodejs', 'Furious Symphony', 'The Ruby Vigilante']
     }
   },
   methods:  {
