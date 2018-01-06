@@ -1,7 +1,7 @@
 <template>
   <div id="add-blog">
     <h2>Add a new blog post</h2>
-    <form>
+    <form v-if="!submitted">
       <label>Blog Title :</label>
       <input type="text" v-model.lazy="blog.title" />
       <label>Blog Content :</label>
@@ -23,18 +23,24 @@
         <option v-for="author in authors">{{ author }}</option>
       </select>
 
-      <div id="preview">
-        <h3>Preview Blog</h3>
-        <p>Blog title : {{ blog.title }}</p>
-        <p>Blog content : </p>
-        <p>{{ blog.content }}</p>
-        <p>Blog Categories : </p>
-        <ul v-for="category in blog.categories">
-          <li>{{ category }}</li>
-        </ul>
-        <p>Author : {{ blog.author }}</p>
-      </div>
+      <button v-on:click.prevent="post">Add Blog</button>
     </form>
+
+    <div v-if="submitted">
+        <h3>Thanks for adding you post !</h3>
+    </div>
+
+    <div id="preview">
+      <h3>Preview Blog</h3>
+      <p>Blog title : {{ blog.title }}</p>
+      <p>Blog content : </p>
+      <p>{{ blog.content }}</p>
+      <p>Blog Categories : </p>
+      <ul v-for="category in blog.categories">
+        <li>{{ category }}</li>
+      </ul>
+      <p>Author : {{ blog.author }}</p>
+    </div>
 
   </div>
 </template>
@@ -49,11 +55,22 @@ export default {
         categories: [],
         author: "",
       },
-      authors: ['The Net Ninja', 'React Badass', 'Chuck Nodejs', 'Furious Symphony', 'The Ruby Vigilante']
+      authors: ['The Net Ninja', 'React Badass', 'Chuck Nodejs', 'Furious Symphony', 'The Ruby Vigilante'],
+      submitted: false,
     }
   },
-  methods:  {
+  methods:{
+    post: function(){
+      this.$http.post('https://jsonplaceholder.typicode.com/posts', {
+        title: this.blog.title,
+        body: this.blog.content,
+        userID: 1
 
+      }).then(function(data){
+        console.log(data);
+        this.submitted = true;
+      });
+    }
   }
 }
 </script>
