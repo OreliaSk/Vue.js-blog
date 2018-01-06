@@ -30,6 +30,7 @@ $ yarn add vue-resource
 * [Vue.js version 2.x](https://vuejs.org/) - Web framework used
 * [vue-cli](https://github.com/vuejs/vue-cli) - Dependency Management
 * [vue-resource](https://github.com/pagekit/vue-resource) - Dependency Managment
+* [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - Fake online REST API for testing and prototyping
 * [Flaticon](https://www.flaticon.com/) - Free icon
 
 ### Author
