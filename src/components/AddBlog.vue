@@ -61,12 +61,7 @@ export default {
   },
   methods:{
     post: function(){
-      this.$http.post('https://jsonplaceholder.typicode.com/posts',{
-        title: this.blog.title,
-        body: this.blog.content,
-        userID: 1
-
-      }).then(function(data){
+      this.$http.post('https://vuejs-blog-711ae.firebaseio.com/posts.json', this.blog).then(function(data){
         console.log(data);
         this.submitted = true;
       });
@@ -75,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 #add-blog * {
   box-sizing: border-box;
