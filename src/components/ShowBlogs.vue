@@ -3,7 +3,7 @@
     <h1 id="blog-articles-title">All Blog Articles</h1>
     <input type="text"v-model="search" placeholder="search blogs" />
     <div v-for="blog in filteredBlogs" class="single-blog">
-      <h2>{{ blog.title }}</h2>
+      <h2 v-rainbow>{{ blog.title }}</h2>
       <article>{{ blog.body }}</article>
     </div>
   </div>
