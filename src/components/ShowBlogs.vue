@@ -4,7 +4,7 @@
     <input type="text"v-model="search" placeholder="search blogs" />
     <div v-for="blog in filteredBlogs" class="single-blog">
       <h2 v-rainbow>{{ blog.title }}</h2>
-      <article>{{ blog.body }}</article>
+      <article>{{ blog.body | snippet }}</article>
     </div>
   </div>
 </template>
@@ -32,6 +32,19 @@ export default{
       return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
+    }
+  },
+  filters:{
+    snippet(value){
+      return value.slice(0, 100) +  ' ...';
+    },
+
+  },
+  directives:{
+    'rainbow':{
+      bind(el, binding, vnode){
+      el.style.color = "#"+ Math.random().toString().slice(2, 8);
+  }
     }
   }
 
