@@ -28,8 +28,12 @@
 </script>
 
 <style>
-	#single-blog {
-		max-width: 960px;
-		margin: 0 auto;
-	}
+#single-blog{
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #eee;
+    border: 1px dotted #aaa;
+    border-radius: 5px;
+}
 </style>

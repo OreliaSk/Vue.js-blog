@@ -11,36 +11,33 @@
 	</nav>
 </template>
 
-<script>
-	export default{
 
-	}
-</script>
+<style scoped>
 
-<style>
-
-ul {
-	list-style-type: none;
-	text-align: center;
-	margin: 0;
+ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
 }
-li {
-	display: inline-block;
-	margin: 0 10px;
+li{
+    display: inline-block;
+    margin: 0 10px;
 }
-a {
-	color: #fff;
-	text-decoration: none;
-	padding: 6px 8px;
+a{
+    background: rgba(68, 68, 68, 0.7);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
 }
-nav {
-	background: #444;
-	padding: 14px 0;
-	margin-bottom: 40px;
+nav{
+    background: url(../assets/Header/header-background.jpg) center;
+    padding: 40px 0;
 }
-.router-link-active {
-	background: #ccc;
-	color: #444;
+.router-link-active{
+    background: #444;
+    color: rgba(255,255,255,0.9);
+    box-shadow: 2px 2px 2px #000;
 }
 	
 </style>

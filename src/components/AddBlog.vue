@@ -1,11 +1,11 @@
 <template>
   <div id="add-blog">
-    <h2>Add a new blog post</h2>
+    <h2>Add your new super coder blog post</h2>
     <form v-if="!submitted">
       <label>Blog Title :</label>
       <input type="text" v-model.lazy="blog.title" />
       <label>Blog Content :</label>
-      <textarea v-model.lazy="blog.content" cols="30" rows="10"></textarea>
+      <textarea v-model.lazy="blog.content"rows="5"></textarea>
 
       <div id="checkboxes">
         <label>Front-end</label>
@@ -72,37 +72,60 @@ export default {
 
 <style scoped>
 
-#add-blog * {
-  box-sizing: border-box;
+h2 {
+  text-align: center;
+  font-size: 2rem;
 }
-#add-blog {
-  margin: 20px auto;
-  max-width: 500px;
+#add-blog *{
+    box-sizing: border-box;
 }
-label {
-  display: block;
-  margin: 20px 0 10px;
+#add-blog{
+    margin: 10px auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(204, 204, 204, .4);
+    border-radius: 5px;
 }
-input[type="text"], textarea {
-  display: block;
-  width: 100%;
-  padding: 8px;
-} 
-#preview {
-  padding: 10px 20px;
-  border: 1px dotted #ccc;
-  margin: 30px 0;
+label{
+    display: block;
+    margin: 20px 0 10px;
 }
-h3 {
-  margin-top: 10px;
+input[type="text"], textarea, select{
+    display: block;
+    width: 100%;
+    padding: 8px;
 }
-
+textarea{
+    height:200px;
+}
+#preview{
+    padding: 10px 20px;
+    border: 1px dotted #ccc;
+    margin: 30px 0;
+}
+h3{
+    margin-top: 10px;
+}
 #checkboxes input{
-  display: inline-block;
-  margin-right: 10px;
+    display: inline-block;
+    margin-right: 10px;
 }
-
-#checkboxes label {
-  display: inline-block;
+#checkboxes label{
+    display: inline-block;
+    margin-top: 0;
+}
+hr{
+    display: none;
+}
+button{
+    display: block;
+    margin: 20px 0;
+    background: crimson;
+    color: #fff;
+    border: 0;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
 }
 </style>

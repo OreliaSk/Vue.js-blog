@@ -27,8 +27,8 @@ export default {
 </script>
 
 <style>
-  * {
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
-  }
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
 </style>
