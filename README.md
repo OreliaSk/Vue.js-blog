@@ -44,3 +44,6 @@ $ yarn add vue-router
 
 ### Author
 * **Orélia Sokambi** - *Initial work*
+
+### Good to know :
+You can have a final render of the app [here](https://github.com/OreliaSk/Vue.js-blog/tree/master/src/assets/Render)
