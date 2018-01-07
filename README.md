@@ -32,12 +32,22 @@ or
 $ yarn add vue-router
 ```
 
+For Firebase :
+```
+# npm
+$ npm install --save re-base
+ 
+# yarn
+$ yarn add re-base
+```
+
 
 ### What I used to build this app :
 * [Vue.js version 2.x](https://vuejs.org/) - Web framework used
 * [vue-cli](https://github.com/vuejs/vue-cli) - Dependency Management
 * [vue-resource](https://github.com/pagekit/vue-resource) - Dependency Managment
 * [vue-router](https://router.vuejs.org/en/installation.html) - Dependency Managment
+* [Firebase](https://firebase.google.com/) - Database
 * [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - Fake online REST API for testing and prototyping
 * [Flaticon](https://www.flaticon.com/) - Free icon
 
