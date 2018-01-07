@@ -5,7 +5,7 @@
       <label>Blog Title :</label>
       <input type="text" v-model.lazy="blog.title" />
       <label>Blog Content :</label>
-      <textarea v-model.lazy="blog.content"rows="5"></textarea>
+      <textarea v-model.lazy="blog.content"rows="3"></textarea>
 
       <div id="checkboxes">
         <label>Front-end</label>

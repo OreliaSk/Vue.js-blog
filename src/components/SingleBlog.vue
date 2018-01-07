@@ -27,7 +27,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 #single-blog{
     max-width: 960px;
     margin: 20px auto;
