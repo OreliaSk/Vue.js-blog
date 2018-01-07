@@ -25,13 +25,11 @@ or
 $ yarn add vue-resource
 ```
 
-For Firebase :
+For vue-router :
 ```
-# npm
-$ npm install --save re-base
- 
-# yarn
-$ yarn add re-base
+$ npm install vue-router
+or
+$ yarn add vue-router
 ```
 
 
